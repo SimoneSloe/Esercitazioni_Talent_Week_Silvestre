@@ -24,21 +24,21 @@ function check_elements() {
     // Controllo se il campo cognome è vuoto
     if (sur_value == null || sur_value == '') {
         alert("Il cognome e' un campo obbligatorio");
-    } else if (sur_value.length > 40) {  //controllo se il cognome supera la grandezza massima consentita
+    } else if (sur_value.length > 40) {  //controllo se il cognome inserito supera la grandezza massima consentita
         alert("Superato il numero massimo di caratteri per il campo Cognome");
     }
 
     // Controllo se il campo nome è vuoto
     if (nam_value == null || nam_value == '') {
         alert("Il nome e' un campo obbligatorio");
-    } else if (nam_value.length > 30) {  //controllo se il nome supera la grandezza massima consentita
+    } else if (nam_value.length > 30) {  //controllo se il nome inserito supera la grandezza massima consentita
         alert("Superato il numero massimo di caratteri per il campo Nome");
     }
 
     // Controllo se il campo matricola è vuoto
     if (matr_value == null || matr_value == '') {
         alert("La matricola e' un campo obbligatorio");
-    } else if (matr_value.length > 12) {  //controllo se la matricola supera la grandezza massima consentita
+    } else if (matr_value.length > 12) {  //controllo se la matricola inserita supera la grandezza massima consentita
         alert("Superato il numero massimo di caratteri per il campo Matricola");
     }
 
@@ -46,7 +46,7 @@ function check_elements() {
     let emailResult = email_regex.test(em_value);
     if (!emailResult) {
         alert("L'email deve essere in un formato valido");
-    } else if (em_value.length > 30) {  //controllo se l'email supera la grandezza massima consentita
+    } else if (em_value.length > 30) {  //controllo se l'email inserita supera la grandezza massima consentita
         alert("Superato il numero massimo di caratteri per il campo Email");
     }
 
@@ -54,7 +54,7 @@ function check_elements() {
     let phoneResult = phone_regex.test(tel_value);
     if (!phoneResult) {
         alert("Il campo Telefono puo' contenere soltanto numeri");
-    } else if (tel_value.length > 15) {  //controllo se il telefono supera la grandezza massima consentita
+    } else if (tel_value.length > 15) {  //controllo se il telefono inserito supera la grandezza massima consentita
         alert("Superato il numero massimo di caratteri per il campo Telefono");
     }
 

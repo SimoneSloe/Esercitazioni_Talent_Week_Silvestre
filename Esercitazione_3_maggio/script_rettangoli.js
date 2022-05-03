@@ -5,7 +5,7 @@ function getRandom(min, max) {
     return Math.floor(Math.random() * (max - min)) + min;
 }
 
-// Funzione che mi restiuisce un oggetto con le coordinate del mouse. Ottenendo inizialmente la posizione relativa del mouse sulla finestra del client, sottraendo la posizione del canvas
+// Funzione che mi restiuisce un oggetto con le coordinate del mouse.
 function getMousePos(canvas, evt) {
     var rect = canvas.getBoundingClientRect();
     return {

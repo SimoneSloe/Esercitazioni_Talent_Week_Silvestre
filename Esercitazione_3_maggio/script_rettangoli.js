@@ -50,8 +50,6 @@ function draw(canvas, e) {
 
 // MAIN 
 
-var i = 0;
-
 var canvas = document.getElementById('canvas_background');
 
 canvas.addEventListener("click", draw.bind(null, canvas));

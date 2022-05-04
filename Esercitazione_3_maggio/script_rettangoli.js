@@ -5,7 +5,7 @@ function getRandom(min, max) {
     return Math.floor(Math.random() * (max - min)) + min;
 }
 
-// Funzione che mi restiuisce un oggetto con le coordinate del mouse.
+// Funzione che mi restiuisce un oggetto con le coordinate del mouse. Ottenendo inizialmente la posizione relativa del mouse sulla finestra del client, sottraendo la posizione del canvas
 function getMousePos(canvas, evt) {
     var rect = canvas.getBoundingClientRect();
     return {
@@ -13,6 +13,7 @@ function getMousePos(canvas, evt) {
         y: evt.clientY - rect.top
     };
 }
+
 
 
 // Funzione che disegna i rettangoli
@@ -36,26 +37,24 @@ function draw(canvas, e) {
     let num_col = getRandom(0, colours.length - 1);
 
     var ctx = canvas.getContext('2d');
-
-
+    
     // assegno un colore alla figura
     ctx.fillStyle = colours[num_col];
 
     // disegno la figura
     ctx.fillRect(cursorX, cursorY, im_widht, im_height);
-   
+
+    // inserisco il testo che dovrebbe essere l'indice per numerare i rettangoli
+    var text = "prova";
+    ctx.font = "30px Verdana";
+    ctx.fillStyle = "black";
+    ctx.textBaseline = "top";
+    ctx.fillText(text, cursorX, cursorY);
 
 }
-
 
 // MAIN 
 
 var canvas = document.getElementById('canvas_background');
 
 canvas.addEventListener("click", draw.bind(null, canvas));
-
-
-
-
-
-

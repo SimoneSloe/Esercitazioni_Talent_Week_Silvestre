@@ -44,17 +44,16 @@ function draw(canvas, e) {
     // disegno la figura
     ctx.fillRect(cursorX, cursorY, im_widht, im_height);
 
-    // inserisco il testo che dovrebbe essere l'indice per numerare i rettangoli
-    var text = "prova";
+    // inserisco l'indice al rettangolo
     ctx.font = "30px Verdana";
     ctx.fillStyle = "black";
     ctx.textBaseline = "top";
-    ctx.fillText(text, cursorX, cursorY);
+    ctx.fillText(i, cursorX, cursorY);
 
 }
 
 // MAIN 
 
 var canvas = document.getElementById('canvas_background');
-
+var i = 0;
 canvas.addEventListener("click", draw.bind(null, canvas));
